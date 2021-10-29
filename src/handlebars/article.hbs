@@ -1,0 +1,30 @@
+<div class="modal__wrap">
+    {{#if poster_path}}
+    <img class="modal__img" src="https://image.tmdb.org/t/p/w500{{poster_path}}">
+    {{else}}<img class="modal__img" src="https://via.placeholder.com/274x410&text=No poster :(">{{/if}}
+    <div>
+        <h2 class="modal__title">{{original_title}}</h2>
+        <div class="modal__list">
+            <ul class="modal__params">
+                <li class="modal__item">Vote / Votes</li>
+                <li class="modal__item">Popularity</li>
+                <li class="modal__item">Original Title</li>
+                <li class="modal__item">Genre</li>
+            </ul>
+            <ul class="modal__value">
+                <li class="modal__meaning">
+                    <span class="modal__meaning--orange">{{vote_average}}</span> / <span
+                        class="modal__meaning--grey">{{vote_count}}</span>
+                </li>
+                <li class="modal__meaning">{{popularity}}</li>
+                <li class="modal__meaning">{{original_title}}</li>
+            </ul>
+        </div>
+        <span class="modal__subtitle">ABOUT</span>
+        <p class="modal__desc">{{overview}}</p>
+        <div class="modal__wrap--btn">
+            <button class="movie-card__btn" data-name="watched" aria-label="add/remove">ADD TO WATCHED</button>
+            <button class="movie-card__btn" data-name="queue" aria-label="add/remove">ADD TO QUEUE</button>
+        </div>
+    </div>
+</div>

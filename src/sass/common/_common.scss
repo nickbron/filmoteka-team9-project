@@ -1,0 +1,144 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: $main-font;
+  font-weight: 500;
+  background-color: $white-color;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  padding: 0;
+  width: 130px;
+  height: 44px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.333;
+
+  color: $white-color;
+  background-color: transparent;
+
+  border: 1px solid $white-color;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  transition: background-color $anim-timing $anim-duration, color $anim-timing $anim-duration;
+
+  @media screen and (min-width: 768px) {
+    width: 136px;
+    height: 44px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    background-color: $accent-btn-color;
+
+    border: none;
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+    border-radius: 5px;
+  }
+}
+
+.movie-card__btn {
+  width: 112px;
+  height: 44px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  border: 1px solid $main-text-color;
+  border-radius: 5px;
+  color: $main-text-color;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    width: 126px;
+    height: 44px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 136px;
+    height: 44px;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+
+  &:hover {
+    background-color: $accent-btn-color;
+    color: $white-color;
+    border-color: inherit;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-open {
+overflow: hidden;
+}
+
+.hide{
+  display: none!important; 
+}
+
+main{
+  min-height: calc(100vh - 100px);
+  @media screen and (min-width: 768px){
+		min-height: calc(100vh - 77px);
+	}
+}
